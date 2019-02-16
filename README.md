@@ -4,10 +4,10 @@ Repository for project hand-ins in the Deep Reinforcement Learning for Robotics 
 
 This repo consists of the following projects:
 
-## Project 1: Navigation
+## [Project 1: Navigation](/project_1_Navigation)
 Leverage neural networks to train an agent to navigate a virtual world and collect as many yellow bananas as possible while avoiding blue bananas.
 
-![Navigation](images/project-image1.png)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d4H7VNFdhHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Project 3: Continuous Control
 Train a robotic arm to reach target locations. For an extra challenge, train a four-legged virtual creature to walk!
