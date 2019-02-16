@@ -7,7 +7,7 @@ This repo consists of the following projects:
 ## [Project 1: Navigation](/project_1_Navigation)
 Leverage neural networks to train an agent to navigate a virtual world and collect as many yellow bananas as possible while avoiding blue bananas.
 
-![Project 1 Navigation video](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=d4H7VNFdhHs)
+![Project 1 Navigation video](https://img.youtube.com/vi/d4H7VNFdhHs/0.jpg)](https://www.youtube.com/watch?v=d4H7VNFdhHs)
 
 ## Project 3: Continuous Control
 Train a robotic arm to reach target locations. For an extra challenge, train a four-legged virtual creature to walk!
