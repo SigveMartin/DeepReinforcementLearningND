@@ -1,4 +1,4 @@
-# Report Project 1: Navigation
+# Report Project 1: Navigation 
 
 For this project, an agent is trained to navigate (and collect bananas!) in a large, square world.
 

@@ -22,6 +22,8 @@ The task is episodic, and in order to solve the environment, your agent must get
 
 ### Getting Started
 
+The [REPORT.md](REPORT.md) file in this repository walks through the implementation and is key to understand the algorim and how to use the work your self. 
+
 1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
     - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
@@ -56,4 +58,4 @@ Then, place the file in the `p1_navigation/` folder in the DRLND GitHub reposito
 
 *** Environment file
 
-Cloning this repo will also give you the `project_environment.yml` that will help you soruce and create your conda environment. I used a Macbook for this. 
+Cloning this repo will also give you the `project_environment.yml` that will help you soruce and create your conda environment. I used a Macbook for this.
