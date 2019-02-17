@@ -61,15 +61,18 @@ In the long run this prevents the algoritm from propogating incidential high rew
 
 #### Hyperparameters for DQN
 The hyperparameters for the agent is found and explained in the [dqn_agent.py](dqn_agent.py).
->`
-* BUFFER_SIZE = int(1e5)  # replay buffer size
-* BATCH_SIZE = 64         # minibatch size
-* GAMMA = 0.99            # discount factor
-* TAU = 1e-3              # for soft update of target parameters
-* LR = 5e-4               # learning rate
-* UPDATE_EVERY = 4        # how often to update the network`
 
-
+* BUFFER_SIZE = int(1e5) -
+The replay buffer size. The amount of tuples that will be stored in memory.
+* BATCH_SIZE = 64 -
+The minibatch size; the minimum number of samples that need to be available in memory in order to start learning from it.
+* GAMMA = 0.99 -
+The discount factor; the value the agent puts on future rewards. If the value is one, the agent values future rewards just as much as the current reward.
+* TAU = 1e-3 - The factor for soft update of target parameters, when copying over weights from local model.
+* LR = 5e-4 -
+The learning rate used to train the neural networks, by the [adam optimizer](https://github.com/SigveMartin/drlnd/blob/16a3234cefbdb55bfd5f9f9d84152fb2275f00ff/project_1_Navigation/dqn_agent.py#L39)
+* UPDATE_EVERY = 4 -
+The number of timesteps the agents performs before learning from experience stored in memory each step.
 
 ## Plot of Rewards
 
@@ -80,3 +83,13 @@ The project was trained on 1000 episodes. As the plot of rewards show below, it 
 As the plot shows, 600 episode had been sufficient as the score reached over 13 on average and that it didn't increase significantly after that.
 
 ## Ideas for future work
+
+Now the network is learning from 37 parameters, having information such as its velocity, along with ray-based perception of objects around its forward direction. These are feed into fully connected linear layers, as described above, to estimate the actions.
+
+An update, as described also in the optional challenge for this project, might be to learn directly from pixels. That requires another environment almost identical to the project environment, where the only difference is that the state is an 84 x 84 RGB image, corresponding to the agent's first-person view of the environment.
+
+In addition it will require updating the network, as defined now in the model, to have a convolutional neural network as the DQN architecture as illustrated in the image below.
+
+![Convolutional neural network architecture](images/dqn-architecture.png)
+
+Here the convolutional layers learns from the pixel data and feeds into fully connected linear layers, and produces the action vector at the end (in this picture from an attari game). 
