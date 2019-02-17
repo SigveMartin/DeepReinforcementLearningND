@@ -31,14 +31,27 @@ Reinforcement learning is often described as an agent trying to interact with an
 
 ![Deep rl](images/deep reinforcement learning.png).
 
+#### Deep Q-Network
 In this project the agent learns from 37 dimmensions of the environment (as described above), and uses a deep neural network (as found in [model.py](/model.py)) to map to the four avaiable actions.
 
- ![Deep nn](images/deep reinforcement learning.png).
+The neural network uses three fully connected [linear layers](https://pytorch.org/docs/stable/nn.html#linear) with [rectified linear unit activation](https://pytorch.org/docs/stable/nn.html#torch.nn.functional.relu) between the fully connected hidden layers and returns an vector of action values from the third fully connected linear layer.
 
-The neural network uses three [linear layers](https://pytorch.org/docs/stable/nn.html#linear) with [rectified linear unit activation](https://pytorch.org/docs/stable/nn.html#torch.nn.functional.relu) between layers and returns an action vector with weights corresponding to the action space the agent have in its environment.
+#### Agent
+The agent is defined in [dqn_agent.py](/dqn_agent.py), which uses the deep q-network.
 
+#### Experience replay
+Our agent uses experience [replay buffer](https://github.com/SigveMartin/drlnd/blob/22c0a477933d6c0e8b72c8ab45f74173025badd4/project_1_Navigation/dqn_agent.py#L120) as illustrated in the image below.
 
+![exerience replay](images/replaybuffer.png)
 
+The agent interacts with the environment and collects experience tuples. These are stored in the replay buffer ([the agents memory](https://github.com/SigveMartin/drlnd/blob/22c0a477933d6c0e8b72c8ab45f74173025badd4/project_1_Navigation/dqn_agent.py#L41)) and later randomly sampled in order to help break the correlations between consecutive experiences and help stabilize the learning algoritm.
+
+In our network we store experience for every step, and then learns (update the network) every fourth step.
+
+#### Double DQN
+In order to prevent overetimation of q-values this agent is equipped with two function approximations, or a double set of [q-networks (local and target)](https://github.com/SigveMartin/drlnd/blob/22c0a477933d6c0e8b72c8ab45f74173025badd4/project_1_Navigation/dqn_agent.py#L36).
+
+![double DQN](images/doubleq.png)
 
 ## Plot of Rewards
 
