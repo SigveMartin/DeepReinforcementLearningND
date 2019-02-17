@@ -92,4 +92,4 @@ In addition it will require updating the network, as defined now in the model, t
 
 ![Convolutional neural network architecture](images/dqn-architecture.png)
 
-Here the convolutional layers learns from the pixel data and feeds into fully connected linear layers, and produces the action vector at the end (in this picture from an attari game). 
+Here the convolutional layers learns from the pixel data and feeds into fully connected linear layers, and produces the action vector at the end (in this picture from an attari game).
