@@ -20,9 +20,13 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
 
-### Getting Started
+The [REPORT.md](REPORT.md) file in this repository walks through the implementation and is key to understand the algorim and how to use the work your self.
 
-The [REPORT.md](REPORT.md) file in this repository walks through the implementation and is key to understand the algorim and how to use the work your self. 
+A video of the last training session and how the agent interacts with the UNITY environment is showed below.
+
+[![Project 1 Navigation video](https://img.youtube.com/vi/d4H7VNFdhHs/0.jpg)](https://www.youtube.com/watch?v=d4H7VNFdhHs)
+
+### Getting Started
 
 1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
@@ -42,7 +46,7 @@ Follow the instructions in `navigation_notebook.ipynb` to get started with train
 
 ### (Optional) Challenge: Learning from Pixels
 
-After you have successfully completed the project, if you're looking for an additional challenge, you have come to the right place!  In the project, your agent learned from information such as its velocity, along with ray-based perception of objects around its forward direction.  A more challenging task would be to learn directly from pixels!
+After you have successfully completed the project, if you're looking for an additional challenge, you have come to the right place!  In the project, your agent learned from information such as its velocity, along with ray-based perception of objects around its forward direction.  A more challenging task would be to learn directly from pixels as described in the section for Ideas for future work in [REPORT.md](REPORT.md).
 
 To solve this harder task, you'll need to download a new Unity environment.  This environment is almost identical to the project environment, where the only difference is that the state is an 84 x 84 RGB image, corresponding to the agent's first-person view.  (**Note**: Udacity students should not submit a project with this new environment.)
 
