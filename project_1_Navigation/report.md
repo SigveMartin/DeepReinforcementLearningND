@@ -32,12 +32,12 @@ Reinforcement learning is often described as an agent trying to interact with an
 ![Deep rl](images/deep reinforcement learning.png).
 
 #### Deep Q-Network
-In this project the agent learns from 37 dimmensions of the environment (as described above), and uses a deep neural network (as found in [model.py](/model.py)) to map to the four avaiable actions.
+In this project the agent learns from 37 dimmensions of the environment (as described above), and uses a deep neural network (as found in [model.py](model.py)) to map to the four avaiable actions.
 
 The neural network uses three fully connected [linear layers](https://pytorch.org/docs/stable/nn.html#linear) with [rectified linear unit activation](https://pytorch.org/docs/stable/nn.html#torch.nn.functional.relu) between the fully connected hidden layers and returns an vector of action values from the third fully connected linear layer.
 
 #### Agent
-The agent is defined in [dqn_agent.py](/dqn_agent.py), which uses the deep q-network.
+The agent is defined in [dqn_agent.py](dqn_agent.py), which uses the deep q-network.
 
 #### Experience replay
 Our agent uses experience [replay buffer](https://github.com/SigveMartin/drlnd/blob/22c0a477933d6c0e8b72c8ab45f74173025badd4/project_1_Navigation/dqn_agent.py#L120) as illustrated in the image below.
@@ -52,6 +52,24 @@ In our network we store experience for every step, and then learns (update the n
 In order to prevent overetimation of q-values this agent is equipped with two function approximations, or a double set of [q-networks (local and target)](https://github.com/SigveMartin/drlnd/blob/22c0a477933d6c0e8b72c8ab45f74173025badd4/project_1_Navigation/dqn_agent.py#L36).
 
 ![double DQN](images/doubleq.png)
+
+In our implemention we get the maximum predicted Q values from the target model and the expected q-values from the local model and evaluate them. The [target model is updated](https://github.com/SigveMartin/drlnd/blob/22c0a477933d6c0e8b72c8ab45f74173025badd4/project_1_Navigation/dqn_agent.py#L106) by copying the weights from the local model into the target model, when learning from the experiences.
+
+The local model is used to produce actions for a state when the agent acts. However, these two function approximators must agree on the best actions through the learning step on the Q-values.
+
+In the long run this prevents the algoritm from propogating incidential high rewards that might be obtained by chance and don't reflect long-turn returns (ref. lesson 2.9 Udacity).
+
+#### Hyperparameters for DQN
+The hyperparameters for the agent is found and explained in the [dqn_agent.py](dqn_agent.py).
+>`
+* BUFFER_SIZE = int(1e5)  # replay buffer size
+* BATCH_SIZE = 64         # minibatch size
+* GAMMA = 0.99            # discount factor
+* TAU = 1e-3              # for soft update of target parameters
+* LR = 5e-4               # learning rate
+* UPDATE_EVERY = 4        # how often to update the network`
+
+
 
 ## Plot of Rewards
 
