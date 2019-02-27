@@ -25,7 +25,7 @@ The task is episodic, and in order to solve the environment, your agent must get
 ## Learning Algoritm
 This project uses reinforcement learning, where an agent learns from an environment, to figure out the best actions to take. It does so by making actions and perceive observations from the environment.
 
-![reinforcement learning](images/dqn-architecture.png).
+![reinforcement learning](images/deep%20reinforcement%20learning.png).
 
 Reinforcement learning is often described as an agent trying to interact with an previously unknown environment, trying to maximize the overall or total reward. This learning algoritm is using deep neural network to approxmate the function that map the observations to the right actions to take in order to maximize this reward.
 
