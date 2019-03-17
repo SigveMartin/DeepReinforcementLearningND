@@ -9,12 +9,12 @@ Leverage neural networks to train an agent to navigate a virtual world and colle
 
 [![Project 1 Navigation video](https://img.youtube.com/vi/d4H7VNFdhHs/0.jpg)](https://www.youtube.com/watch?v=d4H7VNFdhHs)
 
-## Project 3: Continuous Control
+## Project 2: Continuous Control
 Train a robotic arm to reach target locations. For an extra challenge, train a four-legged virtual creature to walk!
 
 ![Continuous Control](images/project-image2.png)
 
-## Project 5: Collaboration and Competition
+## Project 3: Collaboration and Competition
 Train a pair of agents to play tennis. For an extra challenge, train a team of agents to play soccer!
 
 ![Collaboration and Competition](images/project-image3.png)
